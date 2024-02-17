@@ -4,27 +4,16 @@ import ChevronLeft from '@/components/icons/ChevronLeft';
 import ChevronRight from '@/components/icons/ChevronRight';
 import { useLocale } from '@/providers/LocaleProvider';
 import theme from '@/styles/theme';
-import getFormattedMonth from '@/utils/getFormattedMonths';
-import styled, { x } from '@xstyled/emotion';
+import getFormattedMonth from '@/utils/getFormattedMonth';
+import isAfterCurrentMonth from '@/utils/isAfterCurrentMonth';
+import { x } from '@xstyled/emotion';
 import { useEffect, useState } from 'react';
 
 export interface DateSelectorSelectorProps {
   onChange?: (date: Date) => void;
 }
 
-function isSameOrAfterCurrentMonth(dateToCheck: Date) {
-  const todayDate = new Date();
-
-  return (
-    dateToCheck.getFullYear() > todayDate.getFullYear() ||
-    (dateToCheck.getFullYear() === todayDate.getFullYear() &&
-      dateToCheck.getMonth() > todayDate.getMonth())
-  );
-}
-
-export default function MonthAndYearSelector({
-  onChange,
-}: DateSelectorSelectorProps) {
+export default function DateSelector({ onChange }: DateSelectorSelectorProps) {
   const locale = useLocale();
   const [selectedDate, setSelectedDate] = useState(new Date());
 
@@ -63,7 +52,7 @@ export default function MonthAndYearSelector({
     >
       <IconButton
         onClick={handleSelectPrevMonth}
-        disabled={!isSameOrAfterCurrentMonth(selectedDate)}
+        disabled={!isAfterCurrentMonth(selectedDate)}
       >
         <ChevronLeft />
       </IconButton>

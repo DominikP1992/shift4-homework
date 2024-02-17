@@ -23,7 +23,7 @@ const textColorsMap = {
 type TextColor = keyof typeof textColorsMap;
 
 interface TextProps extends React.HTMLAttributes<HTMLElement> {
-  as: TextTag;
+  as?: TextTag;
   size?: TextSize;
   font?: Font;
   color?: TextColor;
@@ -31,7 +31,7 @@ interface TextProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const DynamicText = styled(
-  ({ as, size, font, color, ...otherProps }: TextProps) =>
+  ({ as = 'p', size, font, color, ...otherProps }: TextProps) =>
     React.createElement(as, otherProps),
 )<TextProps>`
   ${({
@@ -44,7 +44,7 @@ const DynamicText = styled(
     line-height:${theme.texts[size].lineHeight};
     font-family: ${font};
     color: ${textColorsMap[color] || 'inherit'};
-    font-weight: ${weight || 'inherit'};
+    font-weight: ${theme.fontWeights[weight] || 'inherit'};
   `}
 `;
 

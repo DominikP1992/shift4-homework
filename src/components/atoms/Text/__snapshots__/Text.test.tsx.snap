@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Text renders correctly with default props 1`] = `
+<p
+  class="css-1qqg77l"
+>
+  Sample Text
+</p>
+`;

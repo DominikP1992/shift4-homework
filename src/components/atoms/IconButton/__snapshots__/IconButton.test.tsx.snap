@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton match snapshot 1`] = `
+<button
+  aria-label="test button"
+  class="css-29n6zw"
+/>
+`;

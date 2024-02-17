@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input match snapshot 1`] = `
+<input
+  aria-label="test input"
+  class="css-4gfppt"
+  inputmode="numeric"
+  type="text"
+  value="10,000"
+/>
+`;

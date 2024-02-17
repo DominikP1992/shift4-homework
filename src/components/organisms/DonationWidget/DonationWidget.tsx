@@ -2,19 +2,19 @@ import Button from '@/components/atoms/Button';
 import IconButton from '@/components/atoms/IconButton';
 import Text from '@/components/atoms/Text';
 import CloseIcon from '@/components/icons/CloseIcon';
-import ModalLogo from '@/components/icons/ModalLogo';
+import DonationWidgetLogo from '@/components/icons/DonationWidgetLogo';
 import CurrencyInput from '@/components/molecules/CurrencyInput';
 import DateSelector from '@/components/molecules/DateSelector';
 import theme from '@/styles/theme';
-import styled, { css, up, useBreakpoint } from '@xstyled/emotion';
+import styled, { css, up, useBreakpoint, x } from '@xstyled/emotion';
 import { Fragment, useMemo, useState } from 'react';
-import Modal from 'react-modal';
-import { x } from '@xstyled/emotion';
 import { useLocale } from '@/providers/LocaleProvider';
 import { NumberFormatValues } from 'react-number-format';
 import { useCurrency } from '@/providers/CurrencyProvider';
+import ReactModal from 'react-modal';
+import getDonationAmount from '@/utils/getDonationAmount';
 
-const StyledModal = styled(Modal)`
+const StyledModal = styled(ReactModal)`
   height: 100%;
   width: 100%;
   border-radius: 0;
@@ -40,36 +40,6 @@ const StyledModal = styled(Modal)`
     `,
   )}
 `;
-
-function monthsUntilFutureDate(futureDate: Date) {
-  const today = new Date();
-  const future = new Date(futureDate);
-
-  let months = (future.getFullYear() - today.getFullYear()) * 12;
-  months -= today.getMonth();
-  months += future.getMonth();
-
-  if (future.getDate() < today.getDate()) {
-    months--;
-  }
-
-  return months ? Number(months) + 1 : 1;
-}
-
-function getDonationAmount({
-  selectedDate,
-  monthlyDonationAmount = 0,
-}: {
-  selectedDate: Date;
-  monthlyDonationAmount?: number;
-}) {
-  const numberOfMonths = monthsUntilFutureDate(selectedDate);
-  const donationAmountSum = monthlyDonationAmount
-    ? numberOfMonths * monthlyDonationAmount
-    : 0;
-
-  return donationAmountSum;
-}
 
 export default function DonationWidget() {
   const locale = useLocale();
@@ -141,7 +111,7 @@ export default function DonationWidget() {
           alignItems="center"
           gap={{ _: '16px', sm: '20px' }}
         >
-          <ModalLogo />
+          <DonationWidgetLogo />
           <x.div
             display="flex"
             justifyContent="center"

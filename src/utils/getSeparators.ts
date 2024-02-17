@@ -10,13 +10,9 @@ export default function getSeparators(locale: string): Separators {
     formattedNumber.lastIndexOf('1') - 1,
   );
 
-  let thousandSeparator = formattedNumber.charAt(
+  const thousandSeparator = formattedNumber.charAt(
     formattedNumber.indexOf('1') + 1,
   );
-
-  if (!thousandSeparator || thousandSeparator === '1') {
-    thousandSeparator = '';
-  }
 
   return { decimalSeparator, thousandSeparator };
 }

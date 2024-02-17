@@ -1,12 +1,15 @@
 import React, { ReactElement, createContext, useContext } from 'react';
 
-export const LocaleContext = createContext<string>('en-us');
+export const defaultLocale = 'en-US';
+export const LocaleContext = createContext<string | undefined>(undefined);
 
 export const LocaleProvider: React.FC<{
   children: ReactElement | ReactElement[];
 }> = ({ children }) => {
   return (
-    <LocaleContext.Provider value={'en-us'}>{children}</LocaleContext.Provider>
+    <LocaleContext.Provider value={defaultLocale}>
+      {children}
+    </LocaleContext.Provider>
   );
 };
 

@@ -4,7 +4,7 @@ import { useLocale } from '@/providers/LocaleProvider/LocaleProvider';
 import { CurrencyType } from '@/types/CurrencyEnum';
 import getSeparators from '@/utils/getSeparators';
 import styled from '@xstyled/emotion';
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { NumericFormat, NumericFormatProps } from 'react-number-format';
 
 export interface CurrencyInputProps
@@ -28,7 +28,6 @@ export default function CurrencyInput({
 }: NumericFormatProps<CurrencyInputProps>) {
   const globalCurrency = useCurrency();
   const locale = useLocale();
-
   const separators = useMemo(() => {
     return getSeparators(locale);
   }, [locale]);

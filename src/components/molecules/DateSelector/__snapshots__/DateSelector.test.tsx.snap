@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DateSelector match snapshot 1`] = `
+<div
+  class="css-zo0th1"
+>
+  <button
+    class="css-29n6zw"
+    disabled=""
+  >
+    <svg
+      fill="none"
+      height="12"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M6 12 0 6l6-6 1.4 1.4L2.8 6l4.6 4.6L6 12Z"
+        fill="#4D6475"
+      />
+    </svg>
+  </button>
+  <div
+    class="css-1gpkp3a"
+  >
+    <span
+      class="css-uoug21"
+      weight="semibold"
+    >
+      June
+    </span>
+    <span
+      class="css-ffvksk"
+    >
+      2024
+    </span>
+  </div>
+  <button
+    class="css-29n6zw"
+  >
+    <svg
+      fill="none"
+      height="12"
+      width="8"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M1.4 12 0 10.6 4.6 6 0 1.4 1.4 0l6 6-6 6Z"
+        fill="#4D6475"
+      />
+    </svg>
+  </button>
+</div>
+`;

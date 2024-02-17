@@ -1,11 +1,13 @@
 import { CurrencyEnum, CurrencyType } from '@/types/CurrencyEnum';
-import React, { ReactElement, createContext, useContext } from 'react';
+import React, { ReactNode, createContext, useContext } from 'react';
 
 export const defaultCurrency = CurrencyEnum.USD;
-export const CurrencyContext = createContext<CurrencyType>(defaultCurrency);
+export const CurrencyContext = createContext<CurrencyType | undefined>(
+  undefined,
+);
 
 export const CurrencyProvider: React.FC<{
-  children: ReactElement | ReactElement[];
+  children: ReactNode | ReactNode[];
 }> = ({ children }) => {
   return (
     <CurrencyContext.Provider value={defaultCurrency}>

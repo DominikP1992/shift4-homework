@@ -1,1 +1,1 @@
-export { useLocale, LocaleContext, LocaleProvider } from './LocaleProvider';
+export { useLocale, LocaleProvider, defaultLocale } from './LocaleProvider';
