@@ -7,8 +7,12 @@ This project is built using [Next.js](https://nextjs.org/), styled with [@xstyle
 A document named `design_vs_architectural_decisions.pdf` has been added to the repository to provide insight into the pivotal decisions made during the development process.
 
 ## Getting Started
+To run this project, you need Node.js version `v20.11.1`. We recommend using NVM (Node Version Manager) to manage Node.js versions. To install or switch to the required Node.js version, follow these steps:
 
-First, install the dependencies:
+1. Install NVM following the instructions on [GitHub NVM](https://github.com/nvm-sh/nvm).
+2. In the project directory, run `nvm install 20.11.1` or `nvm use` if you already have the required version installed.
+
+Install the dependencies:
 
 ```bash
 npm install
