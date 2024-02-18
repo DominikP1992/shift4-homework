@@ -227,7 +227,7 @@ export default function DonationWidget() {
           <x.div
             display="flex"
             gap={{ _: '16px', sm: '24px' }}
-            flexDirection={"row"}
+            flexDirection="row"
             marginTop="40px"
           >
             <Button fullWidth variant="secondary" onClick={onWidgetClose}>
