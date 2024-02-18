@@ -2,7 +2,7 @@
 
 exports[`Text renders correctly with default props 1`] = `
 <p
-  class="css-1qqg77l"
+  class="css-lxt2yb"
 >
   Sample Text
 </p>

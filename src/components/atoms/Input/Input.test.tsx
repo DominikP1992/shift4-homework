@@ -1,6 +1,6 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import Input from './Input'; // Adjust the import path as necessary
+import Input from './Input'; 
+import { render, screen } from '@/tests/testsUtils';
 
 describe('Input', () => {
   it('renders without crashing', () => {

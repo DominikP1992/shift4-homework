@@ -38,13 +38,13 @@ const DynamicText = styled(
     size = 'default',
     font = 'Work sans',
     color = 'default',
-    weight = 'normal',
+    weight,
   }: TextProps) => `
-    font-size:${theme.texts[size].fontSize};
-    line-height:${theme.texts[size].lineHeight};
+    font-size: ${theme.texts[size].fontSize};
+    line-height: ${theme.texts[size].lineHeight};
     font-family: ${font};
-    color: ${textColorsMap[color] || 'inherit'};
-    font-weight: ${theme.fontWeights[weight] || 'inherit'};
+    color: ${textColorsMap[color]};
+    font-weight: ${weight ? theme.fontWeights[weight] : 'inherit'};
   `}
 `;
 

@@ -53,6 +53,7 @@ export default function DateSelector({ onChange }: DateSelectorSelectorProps) {
       <IconButton
         onClick={handleSelectPrevMonth}
         disabled={!isAfterCurrentMonth(selectedDate)}
+        aria-label="select prev month"
       >
         <ChevronLeft />
       </IconButton>
@@ -64,7 +65,10 @@ export default function DateSelector({ onChange }: DateSelectorSelectorProps) {
           {selectedDate.getFullYear()}
         </Text>
       </x.div>
-      <IconButton onClick={handleSelectNextMonth}>
+      <IconButton
+        onClick={handleSelectNextMonth}
+        aria-label="select next month"
+      >
         <ChevronRight />
       </IconButton>
     </x.div>

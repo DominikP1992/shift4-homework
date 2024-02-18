@@ -5,16 +5,24 @@ import CloseIcon from '@/components/icons/CloseIcon';
 import DonationWidgetLogo from '@/components/icons/DonationWidgetLogo';
 import CurrencyInput from '@/components/molecules/CurrencyInput';
 import DateSelector from '@/components/molecules/DateSelector';
-import theme from '@/styles/theme';
-import styled, { css, up, useBreakpoint, x } from '@xstyled/emotion';
+import styled, { up, useBreakpoint, x, css } from '@xstyled/emotion';
 import { Fragment, useMemo, useState } from 'react';
 import { useLocale } from '@/providers/LocaleProvider';
 import { NumberFormatValues } from 'react-number-format';
 import { useCurrency } from '@/providers/CurrencyProvider';
-import ReactModal from 'react-modal';
+import ReactModal, { Props as ReactModalProps } from 'react-modal';
 import getDonationAmount from '@/utils/getDonationAmount';
+import theme from '@/styles/theme';
 
-const StyledModal = styled(ReactModal)`
+// ModalWrapper abstracts ReactModal to enhance extensibility and StyledModal
+// applies custom CSS-in-JS styles for responsive and complex styling directly
+// within React, ensuring seamless integration and flexibility without losing ReactModal's functionality.
+
+const ModalWrapper = (props: ReactModalProps) => {
+  return <ReactModal {...props} />;
+};
+
+const StyledModal = styled(ModalWrapper)`
   height: 100%;
   width: 100%;
   border-radius: 0;
@@ -45,7 +53,7 @@ export default function DonationWidget() {
   const locale = useLocale();
   const breakpoint = useBreakpoint();
   const currency = useCurrency();
-  const [isWidgetOpen, setIsWidgetOpen] = useState(true);
+  const [isWidgetOpen, setIsWidgetOpen] = useState(false);
   const [monthlyDonationAmount, setMonthlyDonationAmount] = useState<
     number | undefined
   >(10);
@@ -192,6 +200,7 @@ export default function DonationWidget() {
                 as="p"
                 size={breakpoint === 'xs' ? 'default' : 'lg'}
                 weight="bold"
+                data-testid="total-amount"
               >
                 {currencyFormatter.format(
                   getDonationAmount({ selectedDate, monthlyDonationAmount }),
@@ -204,7 +213,7 @@ export default function DonationWidget() {
               borderRadius="5px"
               textAlign={{ _: 'center', sm: 'start' }}
             >
-              <Text as="p" size="xs">
+              <Text as="p" size="xs" data-testid="each-month-donation">
                 You will be sending{' '}
                 <strong>
                   {currencyFormatter.format(Number(monthlyDonationAmount) || 0)}

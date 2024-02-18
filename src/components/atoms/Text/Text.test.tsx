@@ -1,6 +1,6 @@
 import React from 'react';
-import Text from './Text'; // Adjust the import path as necessary
-import theme from '@/styles/theme'; // Adjust the import path as necessary
+import Text from './Text';
+import theme from '@/styles/theme';
 import { render, screen } from '@/tests/testsUtils';
 
 describe('Text', () => {

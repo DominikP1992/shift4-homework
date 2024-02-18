@@ -5,6 +5,7 @@ exports[`DateSelector match snapshot 1`] = `
   class="css-zo0th1"
 >
   <button
+    aria-label="select prev month"
     class="css-29n6zw"
     disabled=""
   >
@@ -24,18 +25,19 @@ exports[`DateSelector match snapshot 1`] = `
     class="css-1gpkp3a"
   >
     <span
-      class="css-uoug21"
+      class="css-ia5oih"
       weight="semibold"
     >
       June
     </span>
     <span
-      class="css-ffvksk"
+      class="css-1s199kr"
     >
       2024
     </span>
   </div>
   <button
+    aria-label="select next month"
     class="css-29n6zw"
   >
     <svg

@@ -3,10 +3,10 @@ import { ThemeProvider } from '@emotion/react';
 import { LocaleProvider } from '@/providers/LocaleProvider';
 import { CurrencyProvider } from '@/providers/CurrencyProvider';
 import theme from '@/styles/theme';
-import { ReactNode } from 'react';
+import { ReactElement } from 'react';
 
-function render(ui: ReactNode, renderOptions?: RenderOptions) {
-  function Wrapper({ children }: { children: ReactNode }) {
+function render(ui: ReactElement, renderOptions?: RenderOptions) {
+  function Wrapper({ children }: { children: ReactElement }) {
     return (
       <ThemeProvider theme={theme}>
         <LocaleProvider>

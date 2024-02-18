@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import CurrencyInput from './CurrencyInput'; // Adjust the import path as necessary
+import CurrencyInput from './CurrencyInput'; 
 import { useCurrency } from '@/providers/CurrencyProvider';
 import { useLocale } from '@/providers/LocaleProvider/LocaleProvider';
 import { CurrencyEnum } from '@/types/CurrencyEnum';

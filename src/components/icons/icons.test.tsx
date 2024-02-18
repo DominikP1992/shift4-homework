@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render } from '@/tests/testsUtils';
 import * as Icons from './index';
 
 describe('Icon ', () => {
