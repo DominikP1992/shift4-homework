@@ -1,5 +1,217 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`DonationWidget captures a snapshot for mobile view of the DonationWidget modal content when it is displayed upon clicking the Donate button 1`] = `
+<div
+  class="ReactModalPortal"
+>
+  <div
+    class="ReactModal__Overlay"
+    style="position: fixed; top: 0px; left: 0px; right: 0px; bottom: 0px; background-color: rgba(255, 255, 255, 0.75);"
+  >
+    <div
+      aria-modal="true"
+      class="ReactModal__Content css-ahp4ly"
+      role="dialog"
+      tabindex="-1"
+    >
+      <div
+        class="css-19jwkwh"
+      >
+        <svg
+          fill="none"
+          height="56"
+          width="58"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M54.125 52.125v-23.25 23.25ZM50 17.625c1.15 0 2.125-.4 2.925-1.2.8-.8 1.2-1.775 1.2-2.925s-.4-2.125-1.2-2.925c-.8-.8-1.775-1.2-2.925-1.2s-2.125.4-2.925 1.2c-.8.8-1.2 1.775-1.2 2.925s.4 2.125 1.2 2.925c.8.8 1.775 1.2 2.925 1.2ZM50 21c-2.15 0-3.938-.712-5.362-2.137C43.213 17.438 42.5 15.65 42.5 13.5c0-2.1.712-3.875 2.138-5.325C46.063 6.725 47.85 6 50 6c2.1 0 3.875.725 5.325 2.175C56.775 9.625 57.5 11.4 57.5 13.5c0 2.15-.725 3.938-2.175 5.363C53.875 20.288 52.1 21 50 21Zm-21-6.375c1.55 0 2.875-.537 3.975-1.613 1.1-1.075 1.65-2.412 1.65-4.012 0-1.55-.55-2.875-1.65-3.975-1.1-1.1-2.425-1.65-3.975-1.65-1.6 0-2.938.55-4.012 1.65-1.075 1.1-1.613 2.425-1.613 3.975 0 1.6.538 2.938 1.613 4.012 1.075 1.075 2.412 1.613 4.012 1.613ZM29 18c-2.55 0-4.688-.863-6.413-2.588C20.863 13.688 20 11.55 20 9c0-2.5.863-4.625 2.587-6.375C24.313.875 26.45 0 29 0c2.5 0 4.625.875 6.375 2.625S38 6.5 38 9c0 2.55-.875 4.688-2.625 6.412C33.625 17.137 31.5 18 29 18ZM15.125 31.125c0 1.8.887 3.862 2.663 6.188C19.562 39.638 23.125 43.2 28.474 48l.525.45.6-.525c5.15-4.7 8.65-8.2 10.5-10.5 1.85-2.3 2.775-4.4 2.775-6.3 0-1.7-.55-3.125-1.65-4.275-1.1-1.15-2.475-1.725-4.125-1.725-.95 0-1.85.225-2.7.675a9.682 9.682 0 0 0-2.325 1.725l-3.225 3.15h.3l-3.3-3.15c-.7-.7-1.463-1.275-2.288-1.725a5.474 5.474 0 0 0-2.662-.675c-1.65 0-3.025.575-4.125 1.725-1.1 1.15-1.65 2.575-1.65 4.275Zm-3.45 0c0-2.45.938-4.637 2.813-6.563 1.875-1.925 4.012-2.887 6.412-2.887 1.45 0 2.863.35 4.238 1.05a10.85 10.85 0 0 1 3.487 2.775l.375.45.375-.45c.95-1.15 2.1-2.075 3.45-2.775a9.16 9.16 0 0 1 4.275-1.05c2.35 0 4.475.962 6.375 2.887 1.9 1.925 2.85 4.113 2.85 6.563 0 2.5-.938 5-2.813 7.5-1.874 2.5-5.637 6.325-11.287 11.475L29 53.1l-3.15-2.925c-5.8-5.25-9.613-9.112-11.438-11.587-1.825-2.476-2.737-4.963-2.737-7.463ZM8 17.625c1.15 0 2.125-.4 2.925-1.2.8-.8 1.2-1.775 1.2-2.925s-.4-2.125-1.2-2.925c-.8-.8-1.775-1.2-2.925-1.2s-2.125.4-2.925 1.2c-.8.8-1.2 1.775-1.2 2.925s.4 2.125 1.2 2.925c.8.8 1.775 1.2 2.925 1.2ZM29.225 55.5v-3.375h24.9V29.85c0-.25-.1-.475-.3-.675-.2-.2-.425-.3-.675-.3h-9.075V25.5h9.075c1.2 0 2.225.425 3.075 1.275.85.85 1.275 1.875 1.275 3.075V55.5H29.225Zm-25.35-3.375h25.35V55.5H.5V29.85c0-1.2.425-2.225 1.275-3.075.85-.85 1.875-1.275 3.075-1.275h9.075v3.375H4.85c-.3 0-.537.1-.712.3a.999.999 0 0 0-.263.675v22.275ZM8 21c-2.15 0-3.938-.712-5.362-2.137C1.213 17.438.5 15.65.5 13.5c0-2.1.712-3.875 2.138-5.325C4.063 6.725 5.85 6 8 6c2.1 0 3.875.725 5.325 2.175C14.775 9.625 15.5 11.4 15.5 13.5c0 2.15-.725 3.938-2.175 5.363C11.875 20.288 10.1 21 8 21Z"
+            fill="#423C66"
+          />
+        </svg>
+        <div
+          class="css-6fj3l1"
+        >
+          <h2
+            class="css-19c0us5"
+            weight="bold"
+          >
+            The giving block
+          </h2>
+          <h3
+            class="css-10op7mi"
+          >
+            Set up your donation goal!
+          </h3>
+        </div>
+        <div
+          class="css-146x89b"
+        >
+          <button
+            class="css-14lx0az"
+          >
+            <svg
+              fill="none"
+              height="14"
+              width="14"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.4 14 0 12.6 5.6 7 0 1.4 1.4 0 7 5.6 12.6 0 14 1.4 8.4 7l5.6 5.6-1.4 1.4L7 8.4 1.4 14Z"
+                fill="#595D7B"
+              />
+              <path
+                d="M1.4 14 0 12.6 5.6 7 0 1.4 1.4 0 7 5.6 12.6 0 14 1.4 8.4 7l5.6 5.6-1.4 1.4L7 8.4 1.4 14Z"
+                fill="#000"
+                fill-opacity="0.2"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div
+        class="css-pwjau1"
+      >
+        <div
+          class="css-uruuf4"
+        >
+          <div
+            class="css-wwpacp"
+          >
+            <span
+              class="css-1s199kr"
+            >
+              I can donate
+            </span>
+            <input
+              class="css-fc76nr"
+              inputmode="numeric"
+              placeholder="0.00"
+              type="text"
+              value="10"
+            />
+          </div>
+          <div
+            class="css-wwpacp"
+          >
+            <span
+              class="css-1s199kr"
+            >
+              Every month until
+            </span>
+            <div
+              class="css-zo0th1"
+            >
+              <button
+                aria-label="select prev month"
+                class="css-29n6zw"
+                disabled=""
+              >
+                <svg
+                  fill="none"
+                  height="12"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M6 12 0 6l6-6 1.4 1.4L2.8 6l4.6 4.6L6 12Z"
+                    fill="#4D6475"
+                  />
+                </svg>
+              </button>
+              <div
+                class="css-1gpkp3a"
+              >
+                <span
+                  class="css-ia5oih"
+                  weight="semibold"
+                >
+                  June
+                </span>
+                <span
+                  class="css-1s199kr"
+                >
+                  2024
+                </span>
+              </div>
+              <button
+                aria-label="select next month"
+                class="css-29n6zw"
+              >
+                <svg
+                  fill="none"
+                  height="12"
+                  width="8"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1.4 12 0 10.6 4.6 6 0 1.4 1.4 0l6 6-6 6Z"
+                    fill="#4D6475"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="css-1nlygjo"
+        >
+          <div
+            class="css-hztau5"
+          >
+            <p
+              class="css-lxt2yb"
+            >
+              Total amount
+            </p>
+            <p
+              class="css-squunr"
+              data-testid="total-amount"
+              weight="bold"
+            >
+              $10.00
+            </p>
+          </div>
+          <div
+            class="css-1s7coj3"
+          >
+            <p
+              class="css-ada5qx"
+              data-testid="each-month-donation"
+            >
+              You will be sending
+               
+              <strong>
+                $10.00
+              </strong>
+               
+              every month, until 
+              <strong>
+                June 2024
+              </strong>
+              . Thank you!
+            </p>
+          </div>
+        </div>
+        <div
+          class="css-11mj7gf"
+        >
+          <button
+            class="css-3wuhz"
+          >
+            Cancel
+          </button>
+          <button
+            class="css-18ul0uo"
+          >
+            Continue
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`DonationWidget captures a snapshot of the DonationWidget modal content when it is displayed upon clicking the Donate button 1`] = `
 <div
   class="ReactModalPortal"

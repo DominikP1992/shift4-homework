@@ -48,8 +48,8 @@ const DynamicText = styled(
   `}
 `;
 
-const Text: React.FC<TextProps> = ({ as = 'p', ...rest }) => {
-  return <DynamicText as={as} {...rest} />;
+const Text: React.FC<TextProps> = (props) => {
+  return <DynamicText {...props} />;
 };
 
 export default Text;

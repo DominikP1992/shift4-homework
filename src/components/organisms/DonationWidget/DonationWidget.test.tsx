@@ -1,6 +1,6 @@
 import ReactModal from 'react-modal';
 import DonationWidget from './DonationWidget';
-import { render, screen } from '@/tests/testsUtils';
+import { act, render, screen } from '@/tests/testsUtils';
 import userEvent from '@testing-library/user-event';
 
 describe('DonationWidget', () => {
@@ -44,6 +44,31 @@ describe('DonationWidget', () => {
     const modalPortalWithDocument =
       document.body.querySelector('.ReactModalPortal');
     expect(modalPortalWithDocument).toMatchSnapshot();
+  });
+
+  it('captures a snapshot for mobile view of the DonationWidget modal content when it is displayed upon clicking the Donate button', async () => {
+    const originalWidth = global.innerWidth;
+    const originalHeight = global.innerHeight;
+    global.innerWidth = 360;
+    global.innerHeight = 640;
+    act(() => {
+      global.dispatchEvent(new Event('resize'));
+    });
+
+    render(<DonationWidget />);
+
+    const donateButton = screen.getByText(/💵 Donate 💵/i);
+    await userEvent.click(donateButton);
+
+    const modalPortalWithDocument =
+      document.body.querySelector('.ReactModalPortal');
+    expect(modalPortalWithDocument).toMatchSnapshot();
+
+    global.innerWidth = originalWidth;
+    global.innerHeight = originalHeight;
+    act(() => {
+      global.dispatchEvent(new Event('resize'));
+    });
   });
 
   it('displays correct donation information for each month based on user input', async () => {

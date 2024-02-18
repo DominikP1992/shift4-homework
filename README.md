@@ -1,4 +1,4 @@
-## Rum script
+## Run script
 
 Run the development server:
 
